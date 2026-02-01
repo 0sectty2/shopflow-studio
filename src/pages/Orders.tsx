@@ -1,9 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from '@/components/Header';
-import BottomNav from '@/components/BottomNav';
-import OrderCard from '@/components/OrderCard';
-import { useOrders } from '@/context/OrderContext';
+import Header from '../components/Header';
+import BottomNav from '../components/BottomNav';
+import OrderCard from '../components/OrderCard';
+import { useOrders } from '../context/OrderContext';
 import { Package } from 'lucide-react';
 
 const Orders: React.FC = () => {

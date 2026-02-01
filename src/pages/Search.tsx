@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { Search, SlidersHorizontal, X, Star } from 'lucide-react';
-import Header from '@/components/Header';
-import BottomNav from '@/components/BottomNav';
-import ProductCard from '@/components/ProductCard';
-import { products, searchProducts } from '@/data/products';
+import Header from '../components/Header';
+import BottomNav from '../components/BottomNav';
+import ProductCard from '../components/ProductCard';
+import { products, searchProducts } from '../data/products';
 
 const SearchPage: React.FC = () => {
   const [searchParams] = useSearchParams();

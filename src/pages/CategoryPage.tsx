@@ -1,9 +1,9 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import Header from '@/components/Header';
-import BottomNav from '@/components/BottomNav';
-import ProductCard from '@/components/ProductCard';
-import { categories, getProductsByCategory } from '@/data/products';
+import Header from '../components/Header';
+import BottomNav from '../components/BottomNav';
+import ProductCard from '../components/ProductCard';
+import { categories, getProductsByCategory } from '../data/products';
 
 const CategoryPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();

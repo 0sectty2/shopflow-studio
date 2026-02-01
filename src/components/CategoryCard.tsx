@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Category } from '@/data/products';
-import { cn } from '@/lib/utils';
+import { Category } from '../data/products';
+import { cn } from '../lib/utils';
 
 interface CategoryCardProps {
   category: Category;

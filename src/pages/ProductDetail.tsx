@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Heart, Share2, Star, ChevronDown, ChevronRight, Truck, Shield, RotateCcw, Check } from 'lucide-react';
-import BottomNav from '@/components/BottomNav';
-import ProductCard from '@/components/ProductCard';
-import { getProductById, products } from '@/data/products';
-import { useCart } from '@/context/CartContext';
+import BottomNav from '../components/BottomNav';
+import ProductCard from '../components/ProductCard';
+import { getProductById, products } from '../data/products';
+import { useCart } from '../context/CartContext';
 import { toast } from 'sonner';
 
 const ProductDetail: React.FC = () => {

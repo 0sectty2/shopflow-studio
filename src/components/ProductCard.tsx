@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Star, Heart } from 'lucide-react';
-import { Product } from '@/data/products';
-import { cn } from '@/lib/utils';
+import { Product } from '../data/products';
+import { cn } from '../lib/utils';
 
 interface ProductCardProps {
   product: Product;

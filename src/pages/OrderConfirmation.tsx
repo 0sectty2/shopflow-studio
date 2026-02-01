@@ -1,8 +1,8 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { CheckCircle, Package, Truck, MapPin } from 'lucide-react';
-import BottomNav from '@/components/BottomNav';
-import { useOrders } from '@/context/OrderContext';
+import BottomNav from '../components/BottomNav';
+import { useOrders } from '../context/OrderContext';
 
 const OrderConfirmation: React.FC = () => {
   const { id } = useParams<{ id: string }>();

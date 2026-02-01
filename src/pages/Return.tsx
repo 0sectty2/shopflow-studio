@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Check, ChevronRight, MapPin, Package } from 'lucide-react';
-import BottomNav from '@/components/BottomNav';
-import { useOrders } from '@/context/OrderContext';
+import BottomNav from '../components/BottomNav';
+import { useOrders } from '../context/OrderContext';
 import { toast } from 'sonner';
 
 const Return: React.FC = () => {

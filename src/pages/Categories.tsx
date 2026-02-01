@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from '@/components/Header';
-import BottomNav from '@/components/BottomNav';
-import { categories } from '@/data/products';
+import Header from '../components/Header';
+import BottomNav from '../components/BottomNav';
+import { categories } from '../data/products';
 import { ChevronRight } from 'lucide-react';
 
 const Categories: React.FC = () => {

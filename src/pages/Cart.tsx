@@ -1,9 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from '@/components/Header';
-import BottomNav from '@/components/BottomNav';
-import CartItem from '@/components/CartItem';
-import { useCart } from '@/context/CartContext';
+import Header from '../components/Header';
+import BottomNav from '../components/BottomNav';
+import CartItem from '../components/CartItem';
+import { useCart } from '../context/CartContext';
 import { ShoppingBag } from 'lucide-react';
 
 const Cart: React.FC = () => {

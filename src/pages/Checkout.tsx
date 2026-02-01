@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronRight, Check, MapPin, CreditCard, Plus } from 'lucide-react';
-import BottomNav from '@/components/BottomNav';
-import { useCart } from '@/context/CartContext';
-import { useOrders } from '@/context/OrderContext';
+import BottomNav from '../components/BottomNav';
+import { useCart } from '../context/CartContext';
+import { useOrders } from '../context/OrderContext';
 
 const Checkout: React.FC = () => {
   const navigate = useNavigate();

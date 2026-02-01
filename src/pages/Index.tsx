@@ -1,10 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from '@/components/Header';
-import BottomNav from '@/components/BottomNav';
-import ProductCard from '@/components/ProductCard';
-import InspirationTile from '@/components/InspirationTile';
-import { products, categories, getDeals, getFeaturedProducts } from '@/data/products';
+import Header from '../components/Header';
+import BottomNav from '../components/BottomNav';
+import ProductCard from '../components/ProductCard';
+import InspirationTile from '../components/InspirationTile';
+import { products, categories, getDeals, getFeaturedProducts } from '../data/products';
 import { ChevronRight } from 'lucide-react';
 
 const Index: React.FC = () => {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Package, ChevronRight, Truck, RotateCcw } from 'lucide-react';
-import { Order } from '@/context/OrderContext';
-import { cn } from '@/lib/utils';
+import { Order } from '../context/OrderContext';
+import { cn } from '../lib/utils';
 
 interface OrderCardProps {
   order: Order;

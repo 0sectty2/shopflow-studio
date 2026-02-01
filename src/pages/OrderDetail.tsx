@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Package, Truck, MapPin, CreditCard, ChevronRight, RotateCcw, MessageCircle, FileText } from 'lucide-react';
-import BottomNav from '@/components/BottomNav';
-import { useOrders } from '@/context/OrderContext';
+import BottomNav from '../components/BottomNav';
+import { useOrders } from '../context/OrderContext';
 
 const OrderDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
