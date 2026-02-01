@@ -1,3 +1,4 @@
+// Product detail page
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Heart, Share2, Star, ChevronDown, ChevronRight, Truck, Shield, RotateCcw, Check } from 'lucide-react';

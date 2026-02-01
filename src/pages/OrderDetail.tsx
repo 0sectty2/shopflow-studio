@@ -1,3 +1,4 @@
+// Order detail page
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Package, Truck, MapPin, CreditCard, ChevronRight, RotateCcw, MessageCircle, FileText } from 'lucide-react';

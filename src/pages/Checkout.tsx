@@ -1,3 +1,4 @@
+// Checkout page
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronRight, Check, MapPin, CreditCard, Plus } from 'lucide-react';

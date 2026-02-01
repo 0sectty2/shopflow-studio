@@ -1,3 +1,4 @@
+// Category page
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';

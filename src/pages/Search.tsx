@@ -1,3 +1,4 @@
+// Search page with filters
 import React, { useState, useMemo } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { Search, SlidersHorizontal, X, Star } from 'lucide-react';
