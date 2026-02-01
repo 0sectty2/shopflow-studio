@@ -2,87 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Amazon-like Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core colors - Amazon inspired */
+    --background: 0 0% 96%;
+    --foreground: 220 13% 13%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 13% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 13% 13%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Amazon Orange */
+    --primary: 33 100% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Light gray for secondary */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 220 13% 13%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 14% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Teal accent for categories */
+    --accent: 187 71% 45%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
+    --ring: 33 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Amazon specific colors */
+    --amazon-orange: 33 100% 50%;
+    --amazon-orange-hover: 33 100% 45%;
+    --amazon-yellow: 48 100% 50%;
+    --amazon-teal: 187 71% 45%;
+    --amazon-teal-light: 187 60% 85%;
+    --amazon-navy: 220 45% 20%;
+    --amazon-green: 145 63% 42%;
+    --amazon-prime-blue: 200 80% 45%;
+    
+    /* Category card colors */
+    --category-blue: 210 70% 55%;
+    --category-purple: 270 50% 55%;
+    --category-teal: 175 65% 45%;
+    --category-coral: 15 85% 60%;
+    
+    /* Price colors */
+    --price-red: 0 70% 50%;
+    --price-green: 145 63% 35%;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 220 20% 10%;
+    --foreground: 0 0% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 20% 13%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 20% 13%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 33 100% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 20% 18%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 187 71% 45%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 33 100% 50%;
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +116,156 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  /* Hide scrollbar for cleaner mobile look */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer components {
+  /* Amazon-style button variants */
+  .btn-amazon {
+    @apply bg-primary text-primary-foreground font-medium rounded-full px-6 py-2.5 
+           active:scale-[0.98] transition-all duration-150 shadow-sm;
+  }
+
+  .btn-amazon-outline {
+    @apply border-2 border-primary text-foreground font-medium rounded-full px-6 py-2.5 
+           active:scale-[0.98] transition-all duration-150 bg-card;
+  }
+
+  .btn-amazon-secondary {
+    @apply bg-secondary text-secondary-foreground font-medium rounded-lg px-4 py-2 
+           active:scale-[0.98] transition-all duration-150;
+  }
+
+  /* Product card styles */
+  .product-card {
+    @apply bg-card rounded-xl p-3 shadow-sm border border-border/50 
+           active:scale-[0.98] transition-transform duration-150;
+  }
+
+  /* Category tile styles */
+  .category-tile {
+    @apply rounded-2xl p-4 relative overflow-hidden min-h-[120px]
+           active:scale-[0.97] transition-transform duration-150;
+  }
+
+  /* Prime badge */
+  .prime-badge {
+    @apply text-xs font-bold tracking-wide;
+    color: hsl(var(--amazon-prime-blue));
+  }
+
+  /* Price display */
+  .price-current {
+    @apply text-lg font-bold text-foreground;
+  }
+
+  .price-original {
+    @apply text-sm text-muted-foreground line-through;
+  }
+
+  .price-discount {
+    color: hsl(var(--price-red));
+    @apply text-sm font-medium;
+  }
+
+  /* Search bar */
+  .search-bar {
+    @apply flex items-center gap-2 bg-card rounded-lg px-3 py-2.5 
+           border border-border shadow-sm w-full;
+  }
+
+  /* Bottom navigation */
+  .bottom-nav {
+    @apply fixed bottom-0 left-0 right-0 bg-card border-t border-border 
+           flex justify-around items-center py-2 px-4 z-50;
+    padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+  }
+
+  .bottom-nav-item {
+    @apply flex flex-col items-center gap-0.5 p-2 rounded-lg 
+           text-muted-foreground transition-colors duration-150;
+  }
+
+  .bottom-nav-item.active {
+    @apply text-primary;
+  }
+
+  /* Rating stars */
+  .rating-stars {
+    @apply flex items-center gap-0.5 text-amber-400;
+  }
+
+  /* Section headers */
+  .section-header {
+    @apply flex items-center justify-between px-4 py-3;
+  }
+
+  .section-title {
+    @apply text-lg font-semibold text-foreground;
+  }
+
+  /* Horizontal scroll container */
+  .scroll-container {
+    @apply flex gap-3 overflow-x-auto hide-scrollbar px-4 pb-2;
+    scroll-snap-type: x mandatory;
+  }
+
+  .scroll-container > * {
+    scroll-snap-align: start;
+  }
+}
+
+@layer utilities {
+  /* Safe area padding for mobile */
+  .safe-bottom {
+    padding-bottom: max(5rem, calc(5rem + env(safe-area-inset-bottom)));
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  /* Gradient backgrounds for category cards */
+  .gradient-teal {
+    background: linear-gradient(135deg, hsl(187 71% 45%) 0%, hsl(175 65% 55%) 100%);
+  }
+
+  .gradient-blue {
+    background: linear-gradient(135deg, hsl(210 70% 55%) 0%, hsl(220 60% 65%) 100%);
+  }
+
+  .gradient-purple {
+    background: linear-gradient(135deg, hsl(270 50% 55%) 0%, hsl(280 45% 65%) 100%);
+  }
+
+  .gradient-coral {
+    background: linear-gradient(135deg, hsl(15 85% 60%) 0%, hsl(25 80% 65%) 100%);
+  }
+
+  .gradient-green {
+    background: linear-gradient(135deg, hsl(145 60% 45%) 0%, hsl(155 55% 55%) 100%);
+  }
+
+  .gradient-yellow {
+    background: linear-gradient(135deg, hsl(45 95% 55%) 0%, hsl(35 90% 60%) 100%);
+  }
+
+  /* Text gradient */
+  .text-gradient-amazon {
+    background: linear-gradient(90deg, hsl(33 100% 50%) 0%, hsl(45 100% 50%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
