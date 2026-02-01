@@ -1,25 +1,36 @@
 const fs = require('fs');
-const path = require('path');
 
-// Read package.json
-const packageJson = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json'), 'utf8'));
+// Get the current working directory
+const cwd = process.cwd();
+console.log('Current working directory:', cwd);
 
-// Create a minimal package-lock.json structure
-const lockFile = {
-  name: packageJson.name,
-  version: packageJson.version,
-  lockfileVersion: 3,
-  requires: true,
-  packages: {
-    "": {
-      name: packageJson.name,
-      version: packageJson.version,
-      dependencies: packageJson.dependencies || {},
-      devDependencies: packageJson.devDependencies || {}
+try {
+  // Read package.json
+  const packageJsonPath = `${cwd}/package.json`;
+  console.log('Reading from:', packageJsonPath);
+  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+
+  // Create a minimal package-lock.json structure
+  const lockFile = {
+    name: packageJson.name,
+    version: packageJson.version,
+    lockfileVersion: 3,
+    requires: true,
+    packages: {
+      "": {
+        name: packageJson.name,
+        version: packageJson.version,
+        dependencies: packageJson.dependencies || {},
+        devDependencies: packageJson.devDependencies || {}
+      }
     }
-  }
-};
+  };
 
-// Write package-lock.json
-fs.writeFileSync(path.join(__dirname, '../package-lock.json'), JSON.stringify(lockFile, null, 2));
-console.log('Generated package-lock.json');
+  // Write package-lock.json
+  const lockPath = `${cwd}/package-lock.json`;
+  fs.writeFileSync(lockPath, JSON.stringify(lockFile, null, 2));
+  console.log('Generated package-lock.json at:', lockPath);
+} catch (error) {
+  console.error('Error:', error.message);
+  process.exit(1);
+}
